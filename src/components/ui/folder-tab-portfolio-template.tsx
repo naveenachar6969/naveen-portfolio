@@ -500,7 +500,9 @@ const SECTIONS: { id: FolderSectionId; label: string; page: string }[] = [
 ]
 
 const FTP_CSS = `
-.ftp-root{--ftp-bg:#fefcf8;--ftp-sheet:#ffffff;--ftp-ink:#1a1612;--ftp-soft:#6b5b4a;--ftp-muted:#6b5b4a;--ftp-faint:#e8dfd4;--ftp-line:#e7e0d6;--ftp-ghost:#fdf8f0;--ftp-glass:rgba(255,250,240,.85);--ftp-shadow:0 1px 2px rgba(26,22,18,.06),0 18px 40px -24px rgba(26,22,18,.18);position:relative;isolation:isolate;overflow-x:clip;background:var(--ftp-bg);color:var(--ftp-ink);font-family:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,"Noto Sans Kannada","Noto Sans","Helvetica Neue",Arial,sans-serif;-webkit-font-smoothing:antialiased;line-height:1.6;transition:background-color .4s ease,color .4s ease}
+.ftp-root{--ftp-bg:#fefcf8;--ftp-sheet:#ffffff;--ftp-ink:#1a1612;--ftp-soft:#6b5b4a;--ftp-muted:#6b5b4a;--ftp-faint:#e8dfd4;--ftp-line:#e7e0d6;--ftp-ghost:#fdf8f0;--ftp-glass:rgba(255,250,240,.85);--ftp-shadow:0 1px 2px rgba(26,22,18,.06),0 18px 40px -24px rgba(26,22,18,.18);position:relative;isolation:isolate;overflow-x:clip;background:var(--ftp-bg);color:var(--ftp-ink);font-family:var(--font-sans);-webkit-font-smoothing:antialiased;line-height:1.6;transition:background-color .4s ease,color .4s ease}
+.ftp-sub,.ftp-head-local,.ftp-dl-local,.ftp-band-local,.ftp-card-l,.ftp-step-l,.ftp-modal-l,.ftp-sub-sig{font-family:"Noto Sans Kannada",var(--font-sans)}
+:where([lang="kn"]){font-family:"Noto Sans Kannada",var(--font-sans)}
 .ftp-root[data-theme="dark"]{--ftp-bg:#14100c;--ftp-sheet:#1e1812;--ftp-ink:#fdf8f0;--ftp-soft:#e8dfd4;--ftp-muted:#e8dfd4;--ftp-faint:#5c5245;--ftp-line:#3a3228;--ftp-ghost:#1e1812;--ftp-glass:rgba(30,24,18,.85);--ftp-shadow:0 1px 2px rgba(0,0,0,.4),0 20px 44px -22px rgba(0,0,0,.6)}
 .ftp-root ::selection{background:var(--ftp-blue);color:#fff}
 .ftp-root :focus-visible{outline:2px solid var(--ftp-blue);outline-offset:3px;border-radius:8px}
@@ -1679,7 +1681,7 @@ export default function FolderTabPortfolioTemplate({
         <h2 id={uid + "-" + id + "-h"} style={{ minWidth: 0, flex: "1 1 auto" }}>
           <StrokeText text={wordText} className="ftp-head-word" weight={10} outline={2.2} color="var(--ftp-blue)" ligatures={ligatures} />
         </h2>
-        {opts.local && <span className="ftp-head-local" lang="zh">{opts.local}</span>}
+        {opts.local && <span className="ftp-head-local" lang="kn">{opts.local}</span>}
       </div>
       {opts.withSig && <Signature text={sig} className="ftp-head-sig" delay={500} />}
       {opts.kicker && <p className="ftp-kicker" style={{ marginTop: 14 }}>{opts.kicker}</p>}
@@ -1811,7 +1813,7 @@ export default function FolderTabPortfolioTemplate({
                   aria-label={"Open " + c.label + ", " + countOf(c.id) + " projects"}
                 >
                   <span className="ftp-dl">
-                    <span className="ftp-dl-local" lang="zh">{c.local || c.label}</span>
+                    <span className="ftp-dl-local" lang="kn">{c.local || c.label}</span>
                     <span className="ftp-dl-n">{pad2(i + 1)}</span>
                   </span>
                   <span className="ftp-dl-en" style={{ display: "block" }}>
@@ -1851,7 +1853,7 @@ export default function FolderTabPortfolioTemplate({
                       <span className="ftp-band-n">{pad2(i + 1)}</span>
                       <span style={{ minWidth: 0 }}>
                         <span className="ftp-band-t" style={{ display: "block" }}>{ch.title}</span>
-                        {open && ch.local && <span className="ftp-band-local" lang="zh">{ch.local}</span>}
+                        {open && ch.local && <span className="ftp-band-local" lang="kn">{ch.local}</span>}
                       </span>
                       {open && ch.points && ch.points.length > 0 && (
                         <ul className="ftp-band-pts">
@@ -2039,7 +2041,7 @@ export default function FolderTabPortfolioTemplate({
                     <span className="ftp-card-cap">
                       <span>
                         <span className="ftp-card-t" style={{ display: "block" }}>{p.title}</span>
-                        {p.local && <span className="ftp-card-l" style={{ display: "block" }} lang="zh">{p.local}</span>}
+                        {p.local && <span className="ftp-card-l" style={{ display: "block" }} lang="kn">{p.local}</span>}
                       </span>
                       <span className="ftp-card-y">{p.year}</span>
                     </span>
@@ -2073,7 +2075,7 @@ export default function FolderTabPortfolioTemplate({
                       <div className="ftp-step-n">{pad2(i + 1)}</div>
                       <h3 className="ftp-step-t">
                         {s.title}
-                        {s.local && <span className="ftp-step-l" lang="zh">{s.local}</span>}
+                        {s.local && <span className="ftp-step-l" lang="kn">{s.local}</span>}
                       </h3>
                       {s.duration && <span className="ftp-step-d">{s.duration}</span>}
                       <StepArt index={i} />
@@ -2241,7 +2243,7 @@ export default function FolderTabPortfolioTemplate({
                   <h3 className="ftp-modal-t" id={uid + "-dlg-t"}>
                     {project.title}
                   </h3>
-                  {project.local && <p className="ftp-modal-l" lang="zh">{project.local}</p>}
+                  {project.local && <p className="ftp-modal-l" lang="kn">{project.local}</p>}
                 </div>
                 <p className="ftp-modal-p">{project.summary}</p>
                 {project.body?.map((b, i) => (

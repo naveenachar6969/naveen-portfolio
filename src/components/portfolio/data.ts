@@ -10,16 +10,16 @@
 } from "./types";
 
 export const DEFAULT_CATEGORIES: FolderCategory[] = [
-  { id: "fullstack", label: "Full-Stack", local: "à²ªà³‚à²°à³à²£ à²¸à³à²Ÿà³à²¯à²¾à²•à³", tone: "blue", kind: "page" },
-  { id: "ml", label: "Machine Learning", local: "à²¯à²‚à²¤à³à²° à²•à²²à²¿à²•à³†", tone: "green", kind: "render" },
-  { id: "testing", label: "QA & Testing", local: "à²—à³à²£à²®à²Ÿà³à²Ÿ à²­à²°à²µà²¸à³†", tone: "orange", kind: "poster" },
-  { id: "backend", label: "Backend", local: "à²¬à³à²¯à²¾à²•à³†à²‚à²¡à³", tone: "yellow", kind: "brand" },
+  { id: "fullstack", label: "Full-Stack", local: "ಪೂರ್ಣ ಸ್ಟ್ಯಾಕ್", tone: "blue", kind: "page" },
+  { id: "ml", label: "Machine Learning", local: "ಯಂತ್ರ ಕಲಿಕೆ", tone: "green", kind: "render" },
+  { id: "testing", label: "QA & Testing", local: "ಗುಣಮಟ್ಟ ಭರ್ವಸೆ", tone: "orange", kind: "poster" },
+  { id: "backend", label: "Backend", local: "ಬ್ಯಾಕೆಂಡ್", tone: "yellow", kind: "brand" },
 ];
 
 export const PROJECTS: FolderProject[] = [
   {
     title: "Sparkle Spree",
-    local: "à²šà²®à²šà²®à²¾à§Ž à²µà³à²¯à²¾à²ªà²¾à²°",
+    local: "ಚಮಚಮ vicepresidente ವಯಾಪಾರ",
     category: "fullstack",
     year: "2025",
     client: "Personal Project",
@@ -37,7 +37,7 @@ export const PROJECTS: FolderProject[] = [
   },
   {
     title: "Sentiment Analysis using LSTM",
-    local: "LSTM à²¬à²³à²¸à²¿ à²­à²¾à²µà²¨à³† à²µà²¿à²¶à³à²²à³‡à²·à²£à³†",
+    local: "LSTM ಬಳಿಸಿ ಭಾವನೆ ವಿಶ್ಲೇಷಣೆ",
     category: "ml",
     year: "2024",
     client: "Academic Project",
@@ -110,31 +110,31 @@ export const TIMELINE: FolderTimelineItem[] = [
 export const CHAPTERS: FolderChapter[] = [
   {
     title: "About the Developer",
-    local: "à²…à²­à²¿à²µà³ƒà²¦à³à²§à²¿à²¦à²¾à²°à²° à²¬à²—à³à²—à³†",
+    local: "ಅಭಿವ್ಯಕ್ತಿದಾರರ ಬಗ್ಗೆ",
     points: ["Background", "Skills", "Philosophy", "Goals"],
     target: "about",
   },
   {
     title: "Technical Expertise",
-    local: "à²¤à²¾à²‚à²¤à³à²°à²¿à²• à²ªà³à²°à³Œà²¢à²¤à³†",
+    local: "ತಾಂತ್ರಿಕ ಪ್ರಾಜ್ಞತೆ",
     points: ["Languages", "Frontend", "Backend", "Databases", "Testing", "Cloud"],
     target: "work",
   },
   {
     title: "Project Portfolio",
-    local: "à²ªà³à²°à³Šà²œà³†à²•à³à²Ÿà³ à²ªà³‹à²°à³à²Ÿà³â€Œà²«à³‹à²²à²¿à²¯à³‹",
+    local: "ಪ್ರೊಜೆಕ್ಟ್ ಪೋರ್ಟ್‌ಫೋಲಿಯೋ",
     points: ["Sparkle Spree", "Sentiment Analysis", "Case Studies", "Code Quality"],
     target: "work",
   },
   {
     title: "Development Process",
-    local: "à²…à²­à²¿à²µà³ƒà²¦à³à²§à²¿ à²ªà³à²°à²•à³à²°à²¿à²¯à³†",
+    local: "ಅಭಿವ್ಯಕ್ತಿ ಪ್ರಕ್ರಿಯೆ",
     points: ["Understand", "Architect", "Develop", "Test & Deliver"],
     target: "process",
   },
   {
     title: "Education & Certifications",
-    local: "à²¶à²¿à²•à³à²·à²£ à²®à²¤à³à²¤à³ à²ªà³à²°à²®à²¾à²£à²ªà²¤à³à²°à²—à²³à³",
+    local: "ಶಿಕ್ಷಣ ಮತ್ತು ಪ್ರಮಾಣಪತ್ರಗಳು",
     points: ["MCA", "BCA", "NPTEL Java", "Modern JavaScript", "Coding Club Lead"],
     target: "contact",
   },
@@ -143,28 +143,28 @@ export const CHAPTERS: FolderChapter[] = [
 export const STEPS: FolderStep[] = [
   {
     title: "Understand",
-    local: "à²…à²°à³à²¥à²®à²¾à²¡à²¿à²•à³Šà²³à³à²³à²¿",
+    local: "ಅರ್ಥಮಾಡಿಕೊಳ್ಳಿ",
     duration: "Phase 1",
     body: "Deep diving into requirements, understanding the problem space, identifying constraints, and aligning with stakeholders on the desired outcomes. Every great solution starts with true understanding.",
     outputs: ["Requirements doc", "User stories", "Acceptance criteria", "Technical constraints"],
   },
   {
     title: "Architect",
-    local: "à²µà²¿à²¨à³à²¯à²¾à²¸ à²®à²¾à²¡à²¿",
+    local: "ವಿನ್ಯಾಸ ಮಾಡಿ",
     duration: "Phase 2",
     body: "Planning the system architecture, database schema, API contracts, and application flow. Choosing the right tools and patterns for scalability, maintainability, and performance.",
     outputs: ["Architecture diagram", "Database schema", "API specification", "Tech stack decision"],
   },
   {
     title: "Develop",
-    local: "à²…à²­à²¿à²µà³ƒà²¦à³à²§à²¿ à²ªà²¡à³†à²¯à²¿",
+    local: "ಅಭಿವ್ಯಕ್ತಿ ಮಾಡಿ",
     duration: "Phase 3",
     body: "Building functional, responsive applications with clean code practices. Writing tests, following coding standards, and iterating based on feedback. Code quality and developer experience matter.",
     outputs: ["Working features", "Unit tests", "Code reviews", "Documentation"],
   },
   {
     title: "Test & Deliver",
-    local: "à²ªà²°à³€à²•à³à²·à²¿à²¸à²¿ à²®à²¤à³à²¤à³ à²’à²¦à²—à²¿à²¸à²¿",
+    local: "ಪರೀಕ್ಷಿಸಿ ಮತ್ತು ಶಪಥಿಸಿ",
     duration: "Phase 4",
     body: "Comprehensive testing including manual, functional, regression, and API testing. Debugging issues, validating against requirements, and deploying with confidence. Quality is not an afterthought.",
     outputs: ["Test reports", "Bug fixes", "Deployment", "Monitoring setup"],
@@ -201,15 +201,15 @@ export const CONTACTS: FolderLink[] = [
 
 export const PERSONAL_INFO = {
   name: "Naveen V",
-  localName: "à²¨à²µà³€à²¨à³ à²µà²¿",
+  localName: "ನವೀನ್ ವಿ",
   handle: "@naveenv.dev",
   signature: "Naveen",
-  years: "2024â€“2026",
+  years: "2024–2026",
   role: "Full-Stack Software Developer & QA Test Engineer",
   disciplines: ["Full-Stack Development", "Database Engineering", "Quality Assurance"],
   word: "THE DEVELOPER FILES",
   tag: "#NV",
-  subtitle: ["à²¡à²¿à²œà²¿à²Ÿà²²à³", "à²•à²¾à²°à³à²¯à²¾à²²à²¯"],
+  subtitle: ["ಡಿಜಿಟಲ್", "ಕಾರ್ಯಾಲಯ"],
   notes: ["Clean Code", "Reliable Software", "Continuous Learning"],
   blurb: "I'm Naveen, a Full-Stack Software Developer and QA Test Engineer passionate about building functional, scalable and reliable digital experiences. Based in Tumkur, Karnataka, India.",
   greeting: "Hello, I'm",
